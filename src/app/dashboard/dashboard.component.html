@@ -1,0 +1,81 @@
+<app-top-nav-bar></app-top-nav-bar>
+<ul>
+    <li><a class="nav-link" routerLink="/debounce">Debounce</a></li>
+    <li><a class="nav-link" routerLink="/throttling">Trottling</a></li>
+</ul>
+
+<div class="p-2">
+<button class="btn btn-primary" (click)="getSmartphones()" >Get Data</button> 
+</div>
+<br/>
+
+<div class="p-2">
+<button class="btn btn-primary" (click)="getDummyEmpDataAjax()" >Get Emp Data</button> 
+</div>
+
+<app-parent></app-parent>
+
+<!--
+  <table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let a of smartData">
+        <td>{{a.id}}</td>
+        <td>{{a.name}}</td>
+        <td>{{a.age}}</td>
+      </tr>
+    </tbody>
+</table>
+-->  
+
+
+<div *ngIf="dataBoolean">
+<table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let b of funData">
+        <td>{{b.id}}</td>
+        <td>{{b.name | uppercase}}</td>
+        <td>{{b.age}}</td>
+      </tr>
+    </tbody>
+</table>
+</div>
+
+<div *ngIf="dataEmpBoolean">
+  <table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>year</th>
+        <th>color</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let fetchData of dummyEmpDataAjacCall">
+        <td>{{fetchData.id}}</td>
+        <td>{{fetchData.name}}</td>
+        <td>{{fetchData.year}}</td>
+        <td>{{fetchData.color}}</td>
+      </tr>
+    </tbody>
+</table>
+</div>
+
+
+<app-footer></app-footer>
+
+  
