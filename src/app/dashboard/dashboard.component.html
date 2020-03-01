@@ -54,7 +54,7 @@
 </table>
 </div>
 
-<div *ngIf="dataEmpBoolean">
+<div>
   <table class="table table-bordered" >
     <thead>
       <tr>
@@ -62,14 +62,16 @@
         <th>name</th>
         <th>year</th>
         <th>color</th>
+        <th>pantone_value</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor = "let fetchData of dummyEmpDataAjacCall">
+      <tr *ngFor = "let fetchData of this.dummyEmpDataAjacCall.data">
         <td>{{fetchData.id}}</td>
         <td>{{fetchData.name}}</td>
         <td>{{fetchData.year}}</td>
         <td>{{fetchData.color}}</td>
+        <td>{{fetchData.pantone_value}}</td>
       </tr>
     </tbody>
 </table>

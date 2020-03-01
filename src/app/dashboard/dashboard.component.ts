@@ -36,17 +36,14 @@ export class DashboardComponent implements OnInit {
       
     }) 
 
-    
-
-   
-
   }
 
 getDummyEmpDataAjax(){
-  this.ajaxApi.dummyEmpData().subscribe(data =>{
-    this.dataEmpBoolean = this.showDatatable(data);
-    this.dummyEmpDataAjacCall = data;
-    console.log(this.dummyEmpDataAjacCall);
+  this.ajaxApi.dummyEmpData().subscribe(response =>{
+  // this.dataEmpBoolean = this.showDatatable(this.dummyEmpDataAjacCall);
+    console.log(this.dataEmpBoolean);
+    this.dummyEmpDataAjacCall = response;
+    console.log(this.dummyEmpDataAjacCall.data);
   })
 }
 
@@ -58,6 +55,7 @@ getDummyEmpDataAjax(){
      this.dataBoolean = this.showDatatable(response);
         console.log(this.dataBoolean);
         this.funData = response;
+        console.log(this.funData);
         //this.mainData = response.statusMessage;
         // if(this.funData){
         //   this.funData = response;
