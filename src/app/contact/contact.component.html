@@ -1,3 +1,180 @@
 <app-top-nav-bar></app-top-nav-bar>
-<p>contact works!</p>
+<div class="container">
+<div id="bodyWrapper">
+   <div class="body-content row">
+      <div class="member-billing-training-container">
+         <!--Header Part Start-->  
+         <div class="col-xs-12">
+            <div class="row">
+               <div class="col-sm-8">
+                  <div class="panel panel-default member-billing-training-intro">
+                     <div class="panel-heading">
+                        <h3 class="panel-title">Member Billing Training Attestation</h3>
+                     </div>
+                     <div class="panel-body">
+                        Thank you for completing our Member Billing Training Program.
+                        Please take a moment and complete the required attestation below.
+                        If you have any questions, please contact <a href="mailto:provider.relations@chpw.org">provider.relations@chpw.org</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-4 col-sm-offset-1">
+                  <img  id="prenatalRewardsImage" src="assets/images/prenatal_rewards.png" style="width:350px">
+               </div>
+            </div>
+         </div>
+         <!--Header Part End--> 
+         <!--Form Part Start-->  
+         <div class="col-xs-12">
+            <form [formGroup]="memberBillingTrainingForm" (ngSubmit)="onSubmit()">
+            <div class="member-billing-training" style="font-size: 18px;">
+               <!--Your Deatils Form Start-->  
+               <div class="col-sm-12">
+                  <div class="panel panel-primary" style="border: none;">
+                     <div class="panel-heading" style="background-color: #1BA2DC;">
+                        <div class="panel-heading2" style="">
+                           <h3 class="panel-title" style="">Your Details</h3>
+                        </div>
+                     </div>
+                     <div class="panel-body" style="border: 1px solid #1BA2DC;">
+                        <div class="row">
+                           <div class=" form-group col-md-6">
+                              <label class="control-label" for="firstName">
+                              First Name <span class="fa fa-asterisk redColor"></span>
+                              </label>
+                              <input class="form-control input-md" formControlName="firstName" id="firstName" maxlength="50" name="firstName" placeholder="First Name" required="" type="text">
+                              <div class="col-lg-12 alert alert-danger" hidden="">
+                                 <div *ngIf="submitted && f.leaveType.errors" class="invalid-feedback text-danger">
+                                    <div class="m-0" *ngIf="f.leaveType.errors.required">First Name is required</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class=" form-group col-md-6">
+                              <label class="control-label" for="lastName">
+                              Last Name <span class="fa fa-asterisk redColor"></span>
+                              </label>
+                              <input class="form-control input-md" formControlName="lastName" id="lastName" maxlength="50" name="lastName" placeholder="Last Name" required="" type="text">
+                              <div class="col-lg-12 alert alert-danger" hidden="">
+                                 <div *ngIf="submitted && f.leaveType.errors" class="invalid-feedback text-danger">
+                                    <div class="m-0" *ngIf="f.leaveType.errors.required">Last Name is required</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class=" form-group col-md-12">
+                              <label class="control-label" for="emailAddress">
+                              Email Address <span class="fa fa-asterisk redColor"></span>
+                              </label>
+                              <input class="form-control input-md" formControlName="emailAddress" id="emailAddress" name="emailAddress" placeholder="Email Address" required="" type="email">
+                              <div class="col-lg-12 alert alert-danger" hidden="">
+                                 <div *ngIf="submitted && f.leaveType.errors" class="invalid-feedback text-danger">
+                                    <div class="m-0" *ngIf="f.leaveType.errors.required">Email Address is required</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class=" form-group col-md-6">
+                              <label class="control-label" for="clinicFacilityName">
+                              Clinic/Facility Name <span class="fa fa-asterisk redColor"></span>
+                              </label>
+                              <input class="form-control input-md" formControlName="clinicFacilityName" id="clinicFacilityName" name="clinicFacilityName" placeholder="Clinic/Facility Name" required="" type="text">
+                              <div class="col-lg-12 alert alert-danger" hidden="">
+                                 <div *ngIf="submitted && f.leaveType.errors" class="invalid-feedback text-danger">
+                                    <div class="m-0" *ngIf="f.leaveType.errors.required">Clinic/Facility Name is required</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class=" form-group col-md-6">
+                              <label class="control-label" for="TIN">
+                              TIN #
+                              </label>
+                              <input class="form-control input-md" formControlName="TIN" id="TIN" maxlength="9" name="TIN" placeholder="TIN" required="" type="text">
+                              <div class="col-lg-12 alert alert-danger" hidden=""> TIN is required </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!--Your Deatils Form End--> 
+               <!--Attestation Form Start--> 
+               <div class="col-sm-12">
+                  <div class="panel panel-primary" style="border: none;">
+                     <div class="panel-heading" style="background-color: #1BA2DC;">
+                        <div class="panel-heading2" style="">
+                           <h3 class="panel-title" style="">Attestation</h3>
+                        </div>
+                     </div>
+                     <div class="panel-body" style="border: 1px solid #1BA2DC;">
+                        <div class="form-group col-xs-12 radio-group">
+                           <div class="row">
+                              <label class="attestation-label">Did you take the Member Billing Training webinar? <span class="fa fa-asterisk redColor"></span></label>
+                           </div>
+                           <div class="row attestation-input-radio-group">
+                              <label for="completedTheProgramYes" class="radio-inline"> <input type="radio" value="Yes" class="attestation-input-radio"  formControlName="completedTheProgram" name="completedTheProgram" id="completedTheProgramYes" required="" >Yes</label>
+                              <label for="completedTheProgramNo" class="radio-inline"> <input type="radio" value="No" class="attestation-input-radio" formControlName="completedTheProgram" name="completedTheProgram" id="completedTheProgramNo" required="" >No</label>
+                           </div>
+                        </div>
+                        <div class="form-group col-xs-12 radio-group">
+                           <div class="row">
+                              <label class="attestation-label">Did you understand the material presented? <span class="fa fa-asterisk redColor"></span></label>
+                           </div>
+                           <div class="row attestation-input-radio-group">
+                              <label for="didYouUnderstandYes" class="radio-inline"> <input type="radio" value="Yes" class="attestation-input-radio" formControlName="didYouUnderstand" name="didYouUnderstand" id="didYouUnderstandYes" required="" >Yes</label>
+                              <label for="didYouUnderstandNo" class="radio-inline"> <input type="radio" value="No" class="attestation-input-radio" formControlName="didYouUnderstand" name="didYouUnderstand" id="didYouUnderstandYes" required="" >No</label>
+                           </div>
+                        </div>
+                        <div class="form-group col-xs-12 radio-group">
+                           <div class="row">
+                              <label class="attestation-label">[Q1] When a member/patient is enrolled in the Special Needs Plan, they are covered by Medicare and Medicaid? <span class="fa fa-asterisk redColor"></span></label>
+                           </div>
+                           <div class="row attestation-input-radio-group">
+                              <label for="question1True" class="radio-inline"> <input type="radio" value="Yes" class="attestation-input-radio" name="question1" formControlName="question1" id="question1True" required="" >Yes</label>
+                              <label for="question1False" class="radio-inline"> <input type="radio" value="No" class="attestation-input-radio" name="question1" formControlName="question1" id="question1False" required="" >No</label>
+                           </div>
+                        </div>
+                        <div class="form-group col-xs-12 radio-group">
+                           <div class="row">
+                              <label class="attestation-label">[Q2] A Special Needs Plan member/patient should not be billed for co-pays, co-insurances and/or deductibles. <span class="fa fa-asterisk redColor"></span></label>
+                           </div>
+                           <div class="row attestation-input-radio-group">
+                              <label for="question2True" class="radio-inline"> <input type="radio" value="Yes" class="attestation-input-radio" formControlName="question2" name="question2" id="question2True" required="" >Yes</label>
+                              <label for="question2False" class="radio-inline"> <input type="radio" value="No" class="attestation-input-radio" formControlName="question2" name="question2" id="question2False" required="" >No</label>
+                           </div>
+                        </div>
+                        <div class="form-group col-xs-12 radio-group">
+                           <div class="row">
+                              <label class="attestation-label">[Q3] A provider must not bill a Medicaid client for any services for which the provider failed to satisfy the conditions of payment, i.e., obtaining a Prior Authorization? <span class="fa fa-asterisk redColor"></span></label>
+                           </div>
+                           <div class="row attestation-input-radio-group">
+                              <label for="question3True" class="radio-inline"> <input type="radio" value="Yes" class="attestation-input-radio" formControlName="question3" name="question3" id="question3True" required="" >Yes</label>
+                              <label for="question3False" class="radio-inline"> <input type="radio" value="No" class="attestation-input-radio" formControlName="question3" name="question3" id="question3False" required="" >No</label>
+                           </div>
+                        </div>
+                        <div class="form-group col-xs-12 ">
+                           <div class="row">
+                              <label for="comments" class="attestation-label">Your feedback is important to CHPW. Please enter your comments and suggestions here:</label>
+                           </div>
+                           <div class="row">
+                              <textarea rows="5" name="comments" formControlName="comments" id="comments"  class="form-control"></textarea>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="form-group col text-center attestation-submit">
+                        <button type="submit" class="false" disabled=""> I Attest </button>
+                     </div>
+                  </div>
+               </div>
+               <!--Attestation Form Start--> 
+            </div>
+            </form>
+         </div>
+         <!--Form Part End--> 
+      </div>
+   </div>
+</div>
+<div>
 <app-footer></app-footer>
