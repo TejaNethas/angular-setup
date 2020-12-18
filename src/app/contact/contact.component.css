@@ -1,0 +1,90 @@
+.member-billing-training-container{
+    width: 100%;
+}
+.member-billing-training-container .panel{
+    margin: 30px;
+}
+.member-billing-training .panel-heading, .member-billing-training-intro .panel-heading{
+    background-color: #6dcff6;
+    border-top-left-radius: 0;
+    border-top-right-radius: 30px;
+    height: 69px;
+}
+
+.panel-heading2 {
+    border: 1px solid #1ba2dc;
+    background-color: #1ba2dc;
+    border-top-right-radius: 30px;
+}
+
+.member-billing-training .panel-title, .member-billing-training-intro .panel-title{
+    font-size: 36px;
+    color: #fff;
+}
+.member-billing-training-intro .panel-body{
+    border:none;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+.panel-body .row {
+    margin-right: 0!important;
+    margin-left: 0!important;
+}
+.panel-title{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 13px;
+    padding-left: 15px;
+}
+
+.radio-inline {
+    margin-right: 30px;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+.attestation-input-radio{
+    margin: 0 10px 0 0;
+    transform: scale(1.5);
+}
+.attestation-input-radio-group label{
+    font-weight: 600;
+    font-size: .95em;
+}
+.attestation-label{
+    font-weight: 500;
+    font-size: .95em;
+}
+
+.attestation-submit button {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 32px;
+    color: #f58220;
+    padding: 4px 12px;
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.attestation-submit button:hover {
+    background-color: #f58220;
+    border: 1px solid #f58220;
+    color: #fff!important;
+}
+.form-group{
+    margin-bottom: 35px;
+}
+textarea.form-control{
+    resize: none;
+    color: #555;
+    background-color: #fff;
+    border: 2px solid #1BA2DC;
+    border-radius: 8px;
+}
+/* .form-control:focus {
+    color: #555;
+    background-color: #d1f2fb;
+    border: 2px solid #1BA2DC;
+} */
