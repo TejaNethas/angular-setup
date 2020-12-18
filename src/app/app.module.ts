@@ -7,6 +7,7 @@ import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BoundSensorModule } from 'angular-bound-sensor';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Router import from angular core
 import {MainRoutingModule } from './main-routing/main-routing/main-routing.module';
 
@@ -46,6 +47,8 @@ import { ParentToChildComponent } from './parent-to-child/parent-to-child.compon
     BoundSensorModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AdminServiceService, PopupService],
   bootstrap: [AppComponent],
